@@ -1,0 +1,31 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  NODE_IMAGE: node:14
+  APP_NAME: a-node-app
+  DEPLOY_TARGET: testing 
+  SERVERLESS_VERSION: 3.38.0 #latest version
+  AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID #assume we have them
+  AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY #assume we have them
+
+before_script:
+  - npm install -g serverless@3.38.0
+
+build:
+  stage: build
+  script:
+    - npm install
+
+test:
+  stage: test
+  script:
+    - npm test
+
+deploy:
+  stage: deploy
+  script:
+    - serverless deploy
+

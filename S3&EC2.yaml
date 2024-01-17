@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+  AS3bucket:
+    Type: "AWS::S3:Bucket"
+
+  AEC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      ImageId: An_ID
+      InstanceType: t2.micro 
+      
