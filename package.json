@@ -1,0 +1,11 @@
+{
+    "name": "a-node-app",
+    "version": "1.0.0",
+    "scripts": {
+      "test": "echo 'No test command specified'",
+      "build": "echo 'No build command specified'"
+    },
+    "dependencies": {
+    }
+  }
+  
